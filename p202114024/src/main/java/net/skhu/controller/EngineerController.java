@@ -21,22 +21,22 @@ public class EngineerController {
     }
 
     @RequestMapping(value = "/exam2", produces = "application/json; charset=utf8")
-    public List<Engineer> exam2() {
-        return engineerRepository.findByRoleId(1);}
+    public List<Engineer> exam2(int id ) {
+        return engineerRepository.findByRoleId(id);}
 
     @RequestMapping(value = "/exam3", produces = "application/json; charset=utf8")
-    public List<Engineer> exam3() {
-        return engineerRepository.findByNameStartsWithOrderByName("이");
+    public List<Engineer> exam3(String name) {
+        return engineerRepository.findByNameStartsWithOrderByName(name);
     }
 
     @RequestMapping(value = "/exam4", produces = "application/json; charset=utf8")
-    public List<Engineer> exam4() {
-        return engineerRepository.findByAssignment_Project_id(1);
+    public List<Engineer> exam4(int id) {
+        return engineerRepository.findByAssignmentProjectId(id);
     }
 
     @RequestMapping(value = "/exam5", produces = "application/json; charset=utf8")
-    public List<Engineer> exam5() {
-        return engineerRepository.findByAssignment_Project_Manager_id(2);
+    public List<Engineer> exam5(int id) {
+        return engineerRepository.findByAssignmentProjectId(id);
     }
 
 
