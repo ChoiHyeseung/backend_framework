@@ -16,6 +16,5 @@ public interface EngineerRepository extends JpaRepository<Engineer, Integer>  {
 
     List<Engineer> findByAssignmentProjectId(int id);
     List<Engineer> findByAssignmentProjectManagerId(int id);
-
 }
 
